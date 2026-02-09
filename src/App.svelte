@@ -1,11 +1,23 @@
 <script lang="ts">
-
+	import Generator from './lib/Generator.svelte';
 </script>
 
 <main>
-  <h1> Digital Fortune Cookie</h1>
-  </main>
+	<header>
+		<h1 class="title">Digital Fortune Cookie</h1>
+	</header>
 
-  <style>
+	<Generator />
+</main>
 
-  </style>
+<style>
+	main {
+		text-align: center;
+	}
+	.title {
+		margin-top: 10px;
+		font-weight: var(--bold-ft-wght);
+		font-size: 4rem;
+		color: var(--accent-color);
+	}
+</style>

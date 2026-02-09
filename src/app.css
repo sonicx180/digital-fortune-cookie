@@ -1,8 +1,28 @@
-:root {
+/* https://colorhunt.co/palette/91c6bc4b9da9f6f3c2e37434 */
 
+:root {
+	--primary-color: #4b9da9;
+	--secondary-color: #f6f3c2;
+	--accent-color: #e37434;
+	--bold-ft-wght: 800;
+	--med-ft-wght: 600;
+	--light-ft-wght: 400;
+	--primary-ft: 'Panchang-Variable', sans-serif;
 }
 
-html, body {
-  margin: 0;
-  padding: 0; 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	font-family: var(--primary-ft);
+	overflow:hidden;
 }
