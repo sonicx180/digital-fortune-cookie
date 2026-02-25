@@ -1,8 +1,8 @@
 import { Hono } from 'hono';
-import { cors } from 'hono/cors'
+import { cors } from 'hono/cors';
 
 const app = new Hono();
-app.use('/fortune', cors())
+app.use('/fortune', cors());
 app.get('/', (c) => {
 	return c.text('Hello Hono!');
 });
@@ -26,7 +26,7 @@ app.get('/fortune', async (c) => {
 		);
 
 		const result = await response.json();
-		return c.text(result.output[0].content[0].text)
+		return c.json({ response: result.output[0].content[0].text });
 	} catch (error) {
 		return c.json({ error: 'Request timed out', detail: String(error) });
 	}

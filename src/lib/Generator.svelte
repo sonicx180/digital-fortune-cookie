@@ -3,6 +3,7 @@
 	import scroll from '../assets/cookie.png';
 	const content = "lorem ipsum, hi, lorem upsum"
 	const generate = async () => {
+		const result = await fetch("https://digital-fortune-cookie-server.vercel.app/fortune").then(r => r.text());
 
 	};
 
