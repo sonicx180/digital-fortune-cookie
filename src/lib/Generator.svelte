@@ -1,16 +1,19 @@
 <script lang="ts">
 	import { OpenRouter } from '@openrouter/sdk';
 	import scroll from '../assets/cookie.png';
-	let content = "lorem ipsum, hi, lorem upsum"
+	let content = 'lorem ipsum, hi, lorem upsum';
 	const generate = async () => {
-		const result = await fetch("https://digital-fortune-cookie-server.vercel.app/fortune").then(r => r.json());
+		const result = await fetch(
+			'https://digital-fortune-cookie-server.vercel.app/fortune',
+		).then((r) => r.json());
 		content = result.response;
 	};
-
 </script>
 
 <div class="generator">
-	<button class="generate-btn" onclick={generate}> Generate your fortune</button>
+	<button class="generate-btn" onclick={generate}>
+		Generate your fortune</button
+	>
 	<div class="scroll-container">
 		<span class="scroll-content">
 			{content}
@@ -45,6 +48,9 @@
 		border: none;
 		padding: 5px;
 		font-family: inherit;
+	}
+	.generate-btn:hover {
+		cursor: pointer;
 	}
 	@media screen and (max-width: 400px) {
 		.scroll {
